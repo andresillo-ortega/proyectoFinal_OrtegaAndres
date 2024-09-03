@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Agendar Servicio</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre"><br>
+    <label for="telefono">Teléfono:</label><br>
+    <input type="text" id="telefono" name="telefono"><br>
+    <label for="servicio">Servicio:</label><br>
+    <input type="text" id="servicio" name="servicio"><br>
+    <label for="modelo">Modelo:</label><br>
+    <input type="text" id="modelo" name="modelo"><br>
+    <label for="marca">Marca:</label><br>
+    <input type="text" id="marca" name="marca"><br>
+    <label for="version">Versión:</label><br>
+    <input type="text" id="version" name="version"><br>
+    <button type="submit">Agendar</button>
+</form>
+{% endblock %}

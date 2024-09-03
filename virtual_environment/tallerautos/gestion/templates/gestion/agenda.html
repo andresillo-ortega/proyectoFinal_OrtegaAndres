@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Agenda</h2>
+<table>
+    <tr>
+        <th>Usuario</th>
+        <th>Servicio</th>
+        <th>Fecha</th>
+        <th>Hora</th>
+    </tr>
+    {% for item in agenda_items %}
+    <tr>
+        <td>{{ item.usuario }}</td>
+        <td>{{ item.servicio }}</td>
+        <td>{{ item.fecha }}</td>
+        <td>{{ item.hora }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

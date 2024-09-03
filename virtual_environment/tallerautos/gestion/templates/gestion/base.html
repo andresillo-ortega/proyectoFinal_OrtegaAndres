@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de Autos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/static/images/fondo_taller.jpg');
+            background-size: cover;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #555;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p>Hora local: {{ current_time }}</p>
+    </header>
+    <nav>
+        <a href="{% url 'index' %}">Inicio</a>
+        <a href="{% url 'ubicacion' %}">Ubicación</a>
+        <a href="{% url 'agendar' %}">Agendar Servicio</a>
+        <a href="{% url 'servicios' %}">Servicios</a>
+        <a href="{% url 'login' %}">Login</a>
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
